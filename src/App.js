@@ -1,29 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css"
+import Header from "./components/Header/index"
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Mangas from './components/Mangas/Mangas';
+import Card  from './components/Card/Card';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <NavBar/>
-        <ItemListContainer greeting = "Hola"/>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Routes>
+        <Route path="/" element={ <ItemListContainer greeting="Welcome to Arashi Manga Store"/>}></Route>
+        <Route path="/catalogo" element= {<Mangas/>}></Route>
+      </Routes>
     </div>
-  );
+    </BrowserRouter>
+    );
 }
 
 export default App;

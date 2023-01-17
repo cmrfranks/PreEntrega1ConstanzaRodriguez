@@ -2,25 +2,24 @@ import React from "react";
 import Cart from "../Cart/CartWidget";
 
 function NavBar(){
-    return <navbar>
+    return (
+    <navbar>
         <ul>
             <li>
-                Inicio
+                <a>Inicio</a>
             </li>
             <li>
-                Catalogo
+                <a>Catálogo</a>
             </li>
             <li>
-                Merch
+                <a>Contacto</a>
             </li>
             <li>
-                Contacto
-            </li>
-            <li>
-                <Cart/>
+                <a><Cart/></a>
             </li>
         </ul>
     </navbar>
+    )
 }
 
 export default NavBar;
