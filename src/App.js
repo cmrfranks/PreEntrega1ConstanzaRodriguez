@@ -2,9 +2,9 @@ import "./index.css"
 import Header from "./components/Header/index"
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Mangas from './components/Mangas/Mangas';
-import Card  from './components/Card/Card';
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Contacto from "./components/Pages/Contacto";
 
 function App() {
   return (
@@ -12,8 +12,9 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-        <Route path="/" element={ <ItemListContainer greeting="Welcome to Arashi Manga Store"/>}></Route>
-        <Route path="/catalogo" element= {<Mangas/>}></Route>
+        <Route path="/" element={ <ItemListContainer/> }></Route>
+        <Route path="/item/:itemid" element= {<ItemDetailContainer/>}> </Route>
+        <Route path="/contacto" element= {<Contacto/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>

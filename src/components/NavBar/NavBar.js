@@ -1,24 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Cart from "../Cart/CartWidget";
 
 function NavBar(){
     return (
-    <navbar>
+    <header>
         <ul>
             <li>
-                <a>Inicio</a>
+                <Link to="/">Inicio</Link>
             </li>
             <li>
-                <a>Catálogo</a>
+                <Link to="/catalogo">Catálogo</Link>
             </li>
             <li>
-                <a>Contacto</a>
+                <Link to="/contacto">Contacto</Link>
             </li>
             <li>
-                <a><Cart/></a>
+                <Link><Cart/></Link>
             </li>
         </ul>
-    </navbar>
+    </header>
     )
 }
 
