@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleItem } from "../../services/mockAsyncService";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 
 
-function itemDetailContainer() {
+function ItemDetailContainer() {
     const [product, setProduct] = useState([]);
 
 
 let { itemid } = useParams();
 
 useEffect(() => {
-    getSingleItem(itemid).then((respuesta) => {
+    getSingleItem(itemid)
+    .then((respuesta) => {
     setProduct(respuesta);
-});
-}, [])
+})
+    .catch( (error) => alert (`Error: ${error}`))
+}, [itemid]);
 
 return(
-        <div className="singleItem">
-          <h2>{product.title}</h2>
-          <img src={product.image} alt={product.title} />
-          <p>{product.genre}</p>
-          <p>{product.price}</p>
-        </div>
+        <ItemDetail/>
  );
 }
 
-export default itemDetailContainer;
+export default ItemDetailContainer;

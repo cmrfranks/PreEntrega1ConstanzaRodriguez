@@ -31,7 +31,6 @@ header{
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  position: fixed;
   background-color: #282c34;
   box-shadow: 0 5px 10px #282c33;
 }
@@ -67,4 +66,65 @@ header ul li a{
 
 .carrito{
   cursor: pointer;
+}
+
+.contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.cardItem{
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+
+.contenedor h2{
+ display: inline-block;
+ margin-top: 3rem;
+}
+
+.contenedor .cardItem{
+  margin-top: 3rem;
+}
+
+
+.singleItem{
+  width: 500px;
+  height: 300px;
+  background-color: darkgray;
+  border: 1px solid black ;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divCount{
+  display: flex;
+  justify-content: center;
+}
+
+.divCount p{
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.divCount button{
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
 }

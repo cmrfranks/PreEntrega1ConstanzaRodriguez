@@ -1,0 +1,17 @@
+.cardItem{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 190px;
+    height: 330px;
+    padding: 15px;
+    margin: 10px;
+    background-color: darkgrey;
+    border-radius: 5%;
+}
+
+.cardItem img{
+    display: flex;
+    width: 135px;
+    height: 190px;
+}
