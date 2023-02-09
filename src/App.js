@@ -4,9 +4,11 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacto from "./components/Pages/Contacto";
 import ItemDetail from "./components/ItemDetail/ItemDetail";
+import { CartContextProvider } from "./Storage/CartContext";
 
 function App() {
   return (
+    <CartContextProvider value={ {user: "Comprador"} }>
     <BrowserRouter>
     <div className="App">
       <Header/>
@@ -18,6 +20,7 @@ function App() {
       </Routes>
     </div>
     </BrowserRouter>
+    </CartContextProvider>
     );
 }
 

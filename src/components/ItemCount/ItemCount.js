@@ -1,18 +1,35 @@
 import React from "react";
+import { useState } from "react";
 
-function ItemCount (props) {
-    const [count, setCount] = React.useState(0)
+function ItemCount ({onAddToCart}) {
+    const [count, setCount] = useState(0);
 
     function handleSubstract(){
         setCount(count -1)
     }
 
+    function handleAdd(){
+        setCount(count +1)
+    }
+
     return(
+    <>
     <div className="divCount">
-        <button disabled={ count<=1 } onClick= { handleSubstract }>-</button>
+        <button disabled={ count<=1 } onClick= { handleSubstract }>
+            -
+        </button>
         <p>{count}</p>
-        <button onClick={()=> setCount(count + 1)}>+</button>
+        <button onClick={ handleAdd }>
+            +
+        </button>
     </div>
+
+    <div className="btnAddCart">
+        <button onClick={onAddToCart}>
+            Agregar al carrito
+        </button>
+    </div>
+    </>
     )
 }
 

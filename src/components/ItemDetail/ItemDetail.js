@@ -1,6 +1,8 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import Item from "../Item/Item"
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+
 
 function itemDetail(title, genre, price, image, id) {
     return(
@@ -9,7 +11,7 @@ function itemDetail(title, genre, price, image, id) {
           <img src={Item.image} alt={Item.title} width="350px" height="200px"/>
           <p>{Item.genre}</p>
           <p>{Item.price}</p>
-          <ItemCount/>
+          <ItemCount onAddToCart={handleAddToCart}/>
         </div>
     )
 }
