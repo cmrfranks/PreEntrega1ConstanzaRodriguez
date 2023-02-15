@@ -1,16 +1,14 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount"
-import Item from "../Item/Item"
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 
-function itemDetail(title, genre, price, image, id) {
+function itemDetail({ title, genre, price, image, id, handleAddToCart }) {
     return(
         <div className="singleItem">
-          <h2>{Item.title}</h2>
-          <img src={Item.image} alt={Item.title} width="350px" height="200px"/>
-          <p>{Item.genre}</p>
-          <p>{Item.price}</p>
+          <h2>{title}</h2>
+          <img src={image} alt={title} width="350px" height="200px"/>
+          <p>{genre}</p>
+          <p>{price}</p>
           <ItemCount onAddToCart={handleAddToCart}/>
         </div>
     )
