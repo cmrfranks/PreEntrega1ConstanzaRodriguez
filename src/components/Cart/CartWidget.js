@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const Cart = () => {
+const Cart = ({total}) => {
   return (
     <>
-    <div className='carrito'>
-      🛒
-    </div>
-    <span className='totalProd'></span>
+      <div className='carrito'>
+        🛒
+      </div>
+      <span className='totalProd'>{total}</span>
     </>
   )
 }
 
-export default Cart
+export default Cart;

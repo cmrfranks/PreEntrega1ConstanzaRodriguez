@@ -2,7 +2,7 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount"
 
 
-function itemDetail({ title, genre, price, image, id, handleAddToCart }) {
+function ItemDetail({ title, genre, price, image, id, handleAddToCart }) {
     return(
         <div className="singleItem">
           <h2>{title}</h2>
@@ -14,4 +14,4 @@ function itemDetail({ title, genre, price, image, id, handleAddToCart }) {
     )
 }
 
-export default itemDetail;
+export default ItemDetail;

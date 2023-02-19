@@ -17,16 +17,16 @@ function NavBar(){
                 <Link to="/">Inicio</Link>
             </li>
             <li>
-                <Link to="/category/isekai">Isekai</Link>
+                <Link to="/catalogo/isekai">Isekai</Link>
             </li>
             <li>
-                <Link to="/category/shoujo">Shoujo</Link>
+                <Link to="/catalogo/shoujo">Shoujo</Link>
             </li>
             <li>
-                <Link to="/category/shounen">Shounen</Link>
+                <Link to="/catalogo/shounen">Shounen</Link>
             </li>
             <li>
-                <Link to="/category/seinen">Seinen</Link>
+                <Link to="/catalogo/seinen">Seinen</Link>
             </li>
             <li>
                 <Link to="/contacto">Contacto</Link>

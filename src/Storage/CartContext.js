@@ -18,4 +18,3 @@ export function CartContextProvider(props){
     setCart(newCart);
   }
 }
-

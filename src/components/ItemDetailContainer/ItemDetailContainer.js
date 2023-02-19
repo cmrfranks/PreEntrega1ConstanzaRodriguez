@@ -30,7 +30,13 @@ useEffect(() => {
 }, [itemid]);
 
 return(
-        <ItemDetail/>
+        <ItemDetail
+        title={product.title}
+    genre={product.genre}
+    price={product.price}
+    image={product.image}
+    id={product.id}
+    handleAddToCart={handleAddToCart}/>
  );
 }
 
