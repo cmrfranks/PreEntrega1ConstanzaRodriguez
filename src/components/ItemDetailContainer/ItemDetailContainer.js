@@ -13,7 +13,7 @@ function ItemDetailContainer() {
 
 let { itemid } = useParams();
 
-const { cart, addItem } = useContext(cartContext);
+const { addItem } = useContext(cartContext);
 
 function handleAddToCart(count){
     product.count = count;

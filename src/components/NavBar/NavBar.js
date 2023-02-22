@@ -32,7 +32,7 @@ function NavBar(){
                 <Link to="/contacto">Contacto</Link>
             </li>
             <li>
-                <Link><Cart/></Link>
+                <Link to= "/cart"><Cart/></Link>
             </li>
         </ul>
         </>

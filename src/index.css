@@ -96,7 +96,7 @@ header ul li a{
 
 .singleItem{
   width: 500px;
-  height: 300px;
+  height: 350px;
   background-color: darkgray;
   border: 1px solid black ;
   border-radius: 15px;
@@ -107,6 +107,11 @@ header ul li a{
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.singleItem img{
+  width: 100px;
+  height: 150px;
 }
 
 .divCount{
