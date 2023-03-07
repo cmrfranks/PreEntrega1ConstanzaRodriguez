@@ -26,11 +26,13 @@ export function CartContextProvider(props){
 
 
     function getTotalItems(){
-        
+        let total = 0;
+        cart.forEach( (item) => total += 1)
+        return total;
     }
 
   return(
-        <cartContext.Provider value={ {cart} }>
+        <cartContext.Provider value={ {cart, addItem, removeItem, clearCart, getTotalItems} }>
             {props.children}
         </cartContext.Provider>
     )
