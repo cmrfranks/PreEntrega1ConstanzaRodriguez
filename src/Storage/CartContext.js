@@ -15,9 +15,10 @@ export function CartContextProvider(props){
     }
 
 
-    function removeItem(){
-
-    }
+    function removeItem(itemId) {
+        const newCart = cart.filter((item) => item.id !== itemId);
+        setCart(newCart);
+      }
 
 
     function clearCart(){

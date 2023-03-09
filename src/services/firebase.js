@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getDoc, getFirestore, collection, getDocs } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -15,44 +15,19 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+  
+  
+export async function getSingleItem(id, doc){
+  const docRef = doc(db, "productos", id)
+  const snapshot = await getDoc(docRef);
 
-function getItems() {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(dataBaseItems);
-      }, 1000);
-    });
-  }
-  export default getItems;
-  
-  
-  export function getSingleItem(itemid) {
-  
-    let itemReq = dataBaseItems.find(item => {
-      console.log(item, itemid)
-      return item.id === parseInt(itemid)
-    });
-  
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (itemReq !== undefined)
-         resolve(itemReq);
-        else 
-         reject ("Item no encontrado en la base de datos")
-      }, 200);
-    });
-  }
-  
-   
-  export function getItemsByCategory(categoryid){
-    
-    let itemsCat = dataBaseItems.filter( (item) =>
-    item.genre === categoryid
-    )
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-      resolve(itemsCat);
-    }, 200);
-    });
-  }
-  
+  const docData = snapshot.data();
+  docData.id = snapshot.id;
+  return docData;
+}
+
+export async function getItems(){
+  const productsCollection = collection (db, "productos")
+  const querySnapshot = await getDocs(productsCollection);
+  console.log(querySnapshot.docs);
+}
